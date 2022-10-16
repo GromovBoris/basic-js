@@ -11,3 +11,6 @@ function getEmailDomain(email) {
   domain = email.slice(flag, email.length);
   return domain;
 }
+module.exports = {
+  getEmailDomain,
+};
