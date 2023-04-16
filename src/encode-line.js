@@ -43,7 +43,7 @@ function encodeLine(str) {
       k++;
     }
   }
-  console.log(answer);
+  // console.log(answer);
   return answer;
 }
 // encodeLine("");

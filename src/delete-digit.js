@@ -1,6 +1,16 @@
 const { NotImplementedError } = require("../extensions/index.js");
 
 function deleteDigit(digit) {
+  let str = digit.toString();
+  let max = 0;
+  for (let i = 0; i < str.length; i++) {
+    let num = parseInt(str.slice(0, i) + str.slice(i + 1));
+    if (num > max) {
+      max = num;
+    }
+  }
+  return max;
+
   // let arrDigit = [...digit.toString()].map(Number);
   // console.log(arrDigit);
   // let finalArr = Array;
@@ -10,13 +20,13 @@ function deleteDigit(digit) {
   // console.log(finalArr);
   // let digitArr = Array.from(String(digit)).map((i) => Number(i));
   // let newStr = digit.toString();
-  // let digitArr = Array;
+  // digitArr = Array;
   // for (i = 0; i < newStr.length - 1; i++) {
   //   digitArr[i] = newStr.replace(newStr[i], "");
   //   console.log(newStr[i]);
   // }
   // let a = newStr.slice(0, -1);
-  // let finalArr = digitArr.push(a);
+  // finalArr = digitArr.push(a);
   // console.log(finalArr);
   // let newArr = Object.values(digitArr);
   // console.log(newArr);
@@ -27,7 +37,7 @@ function deleteDigit(digit) {
   //     answer = newArr[i + 1];
   //   }
   // }
-  // console.log(answer);
+  // // console.log(answer);
   // return answer;
 }
 // deleteDigit(1001);
